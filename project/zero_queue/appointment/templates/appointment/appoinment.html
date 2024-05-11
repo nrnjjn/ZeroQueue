@@ -1,0 +1,28 @@
+{% extends 'temp/organisation.html' %}
+{% block base %}
+	<h1 align="center">
+		VIEW APPOINMENT AND MANAGE
+	</h1>
+	<table align="center"border="1">
+		<tr>
+{#		<td>id</td>#}
+		<td>date</td>
+		<td>time</td>
+		<td>department</td>
+{#		<td>hours</td>#}
+
+		</tr>
+        {% for i in objval %}
+		<tr>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+			<td>{{ i.department }}</td>
+			<td></td>
+{#			<td></td>#}
+			<td><a href="{% url 'abcd' idd=i.a_id %}">accept</a></td>
+			<td><a href="{% url 'efg' idd=i.a_id %}">reject</a></td>
+		</tr>
+        {% endfor %}
+	</table>
+
+{% endblock %}

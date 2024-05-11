@@ -1,0 +1,20 @@
+{% extends 'temp/organisation.html' %}
+{% block base %}
+	<h1 align="center">VIEW FEEDBACK</h1>
+	<table align="center"border="1">
+		<tr>
+
+			<td>feedback</td>
+			<td>date</td>
+			<td>time</td>
+		</tr>
+          {% for i in objval %}
+	<tr>
+		<td>{{i.feedback }}</td>
+		<td>{{ i.date }}</td>
+        <td>{{ i.time }}</td>
+	</tr>
+    {% endfor %}
+
+	</table>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'temp/organisation.html' %}
+{% block base %}
+	<h1 align="center">ADD DEPARTMENT</h1>
+	<form method="post">
+        {% csrf_token %}
+		<table align="center">
+			<tr>
+				<td>department</td>
+				<td><input type="text" name="dept"></td>
+
+			</tr>
+			<td>details</td>
+			<td><input type="text" name="details"></td>
+		</tr>
+<tr>
+	<td></td>
+	<td><input type="submit" name="post"value="post"></td></tr></table>
+
+	</form>
+{% endblock %}

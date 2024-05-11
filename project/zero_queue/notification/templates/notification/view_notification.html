@@ -1,0 +1,21 @@
+{% extends 'temp/organisation.html' %}
+{% block base %}
+	<<h1 align="center">VIEW NOTIFICATION</h1>
+	<table border="1"align="center">
+		<tr>
+
+			<td>date</td>
+			<td>time</td>
+			<td>notification</td>
+
+		</tr>
+        {% for i in objval %}
+		<tr>
+			<td>{{ i.date }}</td>
+			<td>{{ i.time }}</td>
+			<td>{{ i.notification }}</td>
+
+		</tr>
+        {% endfor %}
+	</table>
+{% endblock %}

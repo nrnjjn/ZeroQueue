@@ -1,0 +1,40 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+	<div align="center">SEARCH DEPARTMENT
+
+     <br>
+              <br>
+              <br>
+	<table align="center">
+        <div align="center">
+		<form method="post">
+            {% csrf_token %}
+
+			<tr>
+				<td>department</td>
+				<td><input type="text" name="department"></td>
+				<td><input type="submit" name="search"value="search"></td>
+			</tr>
+		</form>
+	</table>
+<table border="1"align="center">
+
+	<tr>
+		<td>name</td>
+		<td>Details</td>
+{#		<td>phone number</td>#}
+{#		<td>email</td>#}
+
+	</tr>
+    {% for i in ok %}
+	<tr>
+		<td>{{ i.department }}</td>
+		<td>{{ i.details }}</td>
+{#		<td></td>#}
+{#		<td></td>#}
+	</tr>
+    {% endfor %}
+</table>
+    </div>
+
+{% endblock %}

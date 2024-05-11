@@ -1,0 +1,27 @@
+{% extends 'temp/index.html' %}
+{% block base %}
+	<h1 align="center">MANAGE ORGANISATION</h1>
+	<table align="center"border="1">
+		<tr>
+{#            <td>number</td>#}
+			<td>name</td>
+
+			<td>address</td>
+			<td>email</td>
+			<td>phone number</td>
+
+		</tr>
+        {%  for i in objval %}
+		<tr>
+			<td>{{i.name}}</td>
+			<td>{{ i.address }}</td>
+			<td>{{ i.email }}</td>
+			<td>{{ i.phone_no }}</td>
+
+			<td><a  href="{% url 'apv' idd=i.o_id %}">approve</a></td>
+			<td><a href="{% url 'rejct' idd=i.o_id %}">reject</a></td>
+		</tr>
+{% endfor %}
+	</table>
+
+{% endblock %}

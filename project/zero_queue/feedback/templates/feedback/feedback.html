@@ -1,0 +1,22 @@
+{% extends 'temp/user.html' %}
+{% block base %}
+<h1 align="center">feedback</h1>
+	<form method="post">
+        {% csrf_token %}
+		<table align="center">
+			<tr>
+				<td>date</td>
+				<td><input type="date" name="date"></td>
+			</tr>
+			<tr>
+				<td>feedback</td>
+				<td><input type="text" name="feedback"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="post" value="post"></td>
+			</tr>
+		</table>
+	</form>
+
+{% endblock %}
